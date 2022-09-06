@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Update Post</h1>
    
-    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
-<form [formGroup]!="frm">
+    <a routerLink="/post/index" class="btn btn-primary">Back</a>
+    <form *ngIf="users" [formGroup]="userForm" (submit)="onSubmit()" novalidate>
         <div class="form-group">
             <label for="birthday">birthday:</label>
             <input 
-                [value]="users.birthday"
+                [value]=""
                 formControlName="birthday" 
                 id="birthday" 
                 type="text" 
@@ -16,7 +16,7 @@
         <div class="form-group">
             <label for="details">details:</label>
             <input 
-            [value]="users.details"
+                [value]=""
                 formControlName="details"
                 id="details" 
                 type="text" 
@@ -28,7 +28,7 @@
         <div class="form-group">
             <label for="email">email:</label>
             <input 
-            [value]="users.email"
+            [value]=""
                 formControlName="email"
                 id="email" 
                 type="text" 
@@ -39,7 +39,7 @@
         <div class="form-group">
             <label for="phone">phone:</label>
             <input 
-            [value]="users.phone"
+            [value]=""
                 formControlName="phone"
                 id="phone" 
                 type="text" 
@@ -50,7 +50,7 @@
         <div class="form-group">
             <label for="type">type:</label>
             <input 
-            [value]="users.type"
+            [value]=""
                 formControlName="type"
                 id="type" 
                 type="text" 
@@ -61,7 +61,7 @@
         <div class="form-group">
             <label for="userName">userName:</label>
             <input 
-            [value]="users.userName"
+                [value]=""
                 formControlName="userName"
                 id="userName" 
                 type="text" 

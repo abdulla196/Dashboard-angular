@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
 
   getUsers() {
     this.UsersService.getUsers().subscribe(res => {
-      this.users = res;
+      this.users = res.data;
       console.log('Post deleted successfully!');
     })
   }

@@ -23,10 +23,15 @@ export class UsersComponent implements OnInit {
   getUsers() {
     this.UsersService.getUsers().subscribe(res => {
       this.users = res.data;
-      console.log('Post deleted successfully!');
     })
   }
-  
+  DeleteUser(id: any){
+    this.UsersService.DeleteUser(id).subscribe(res => {
+      if(res.message == 'done'){
+        window.location.reload()
+      }
+    })
+  }
   onTableDataChange(event: any) {
     this.page = event;
     this.getUsers();

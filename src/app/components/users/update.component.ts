@@ -49,26 +49,13 @@ export class UsersUpdateComponent implements OnInit {
           userName: [
             data.userName, [Validators.required]
           ]
-        });
-        // this.frm = this.fb.group({
-        //     birthday: new FormControl(data.birthday , [Validators.required]),
-        //     details: new FormControl(data.details , Validators.required),
-        //     email: new FormControl(data.email, Validators.required),
-        //     phone: new FormControl(data.phone, Validators.required),
-        //     type: new FormControl(data.type , Validators.required),
-        //     userName: new FormControl(data.userName , Validators.required)
-        // }); 
+        }); 
       }) 
   }
 
   onSubmit() {
-    console.log('submit');
-    if (this.userForm.dirty && this.userForm.valid) {
-      console.log('userForm is valid >>', this.userForm.value);
-    } else {
-      this.userForm.markAsTouched();
-      this.userForm.markAsDirty();
-    }
+      this.UsersService.updateUser(this.userForm.value,this.userId.userId)
+
 
     // stop here if form is invalid
     // if (this.form.invalid) {

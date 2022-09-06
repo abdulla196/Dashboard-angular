@@ -1,71 +1,94 @@
-<div class="container">
-    <h1>Update Post</h1>
-   
-    <a routerLink="/post/index" class="btn btn-primary">Back</a>
+<div class="container py-5">
+    <div class="row justify-content-between mb-3">
+        <h1 class="col-auto">Update Post</h1>
+        <div class="col-auto">
+            <a routerLink="/post/index" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+
     <form *ngIf="users" [formGroup]="userForm" (submit)="onSubmit()" novalidate>
-        <div class="form-group">
-            <label for="birthday">birthday:</label>
+        <div class="form-group mb-3">
+            <label for="birthday">Birthday:</label>
             <input 
                 [value]=""
                 formControlName="birthday" 
                 id="birthday" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Birthday is required.
+            </div>
         </div>
     
-        <div class="form-group">
-            <label for="details">details:</label>
+        <div class="form-group mb-3">
+            <label for="details">Details:</label>
             <input 
                 [value]=""
                 formControlName="details"
                 id="details" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Details is required.
+            </div>
         </div>
-           
-        
     
-        <div class="form-group">
-            <label for="email">email:</label>
+        <div class="form-group mb-3">
+            <label for="email">Email:</label>
             <input 
             [value]=""
                 formControlName="email"
                 id="email" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Email is required.
+            </div>
         </div>
-        
     
-        <div class="form-group">
-            <label for="phone">phone:</label>
+        <div class="form-group mb-3">
+            <label for="phone">Phone:</label>
             <input 
             [value]=""
                 formControlName="phone"
                 id="phone" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Phone is required.
+            </div>
         </div>
-        
     
-        <div class="form-group">
-            <label for="type">type:</label>
+        <div class="form-group mb-3">
+            <label for="type">Type:</label>
             <input 
             [value]=""
                 formControlName="type"
                 id="type" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Type is required.
+            </div>
         </div>
-        
     
-        <div class="form-group">
-            <label for="userName">userName:</label>
+        <div class="form-group mb-3">
+            <label for="userName">Username:</label>
             <input 
                 [value]=""
                 formControlName="userName"
                 id="userName" 
                 type="text" 
-                class="form-control">
+                class="form-control"
+                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
+            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                Username is required.
+            </div>
         </div>
          
         <button class="btn btn-primary" type="submit">Update</button>

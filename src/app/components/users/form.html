@@ -1,0 +1,74 @@
+<div class="container">
+    <h1>Update Post</h1>
+   
+    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+<form [formGroup]!="frm">
+        <div class="form-group">
+            <label for="birthday">birthday:</label>
+            <input 
+                [value]="users.birthday"
+                formControlName="birthday" 
+                id="birthday" 
+                type="text" 
+                class="form-control">
+        </div>
+    
+        <div class="form-group">
+            <label for="details">details:</label>
+            <input 
+            [value]="users.details"
+                formControlName="details"
+                id="details" 
+                type="text" 
+                class="form-control">
+        </div>
+           
+        
+    
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input 
+            [value]="users.email"
+                formControlName="email"
+                id="email" 
+                type="text" 
+                class="form-control">
+        </div>
+        
+    
+        <div class="form-group">
+            <label for="phone">phone:</label>
+            <input 
+            [value]="users.phone"
+                formControlName="phone"
+                id="phone" 
+                type="text" 
+                class="form-control">
+        </div>
+        
+    
+        <div class="form-group">
+            <label for="type">type:</label>
+            <input 
+            [value]="users.type"
+                formControlName="type"
+                id="type" 
+                type="text" 
+                class="form-control">
+        </div>
+        
+    
+        <div class="form-group">
+            <label for="userName">userName:</label>
+            <input 
+            [value]="users.userName"
+                formControlName="userName"
+                id="userName" 
+                type="text" 
+                class="form-control">
+        </div>
+         
+        <button class="btn btn-primary" type="submit">Update</button>
+
+    </form>
+</div>

@@ -15,8 +15,8 @@
                 id="birthday" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="birthday && birthday.invalid && (birthday.dirty || birthday.touched) ? 'border-danger':''">
+            <div *ngIf="birthday && birthday.invalid && (birthday.dirty || birthday.touched)" class="text-danger small">
                 Birthday is required.
             </div>
         </div>
@@ -29,8 +29,8 @@
                 id="details" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="details && details.invalid && (details.dirty || details.touched) ? 'border-danger':''">
+            <div *ngIf="details && details.invalid && (details.dirty || details.touched)" class="text-danger small">
                 Details is required.
             </div>
         </div>
@@ -43,8 +43,8 @@
                 id="email" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="email && email.invalid && (email.dirty || email.touched) ? 'border-danger':''">
+            <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="text-danger small">
                 Email is required.
             </div>
         </div>
@@ -57,8 +57,8 @@
                 id="phone" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="phone && phone.invalid && (phone.dirty || phone.touched) ? 'border-danger':''">
+            <div *ngIf="phone && phone.invalid && (phone.dirty || phone.touched)" class="text-danger small">
                 Phone is required.
             </div>
         </div>
@@ -71,8 +71,8 @@
                 id="type" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="type && type.invalid && (type.dirty || type.touched) ? 'border-danger':''">
+            <div *ngIf="type && type.invalid && (type.dirty || type.touched)" class="text-danger small">
                 Type is required.
             </div>
         </div>
@@ -85,8 +85,8 @@
                 id="userName" 
                 type="text" 
                 class="form-control"
-                [ngClass]="userForm.invalid && (userForm.dirty || userForm.touched) ? 'border-danger':''">
-            <div *ngIf="userForm.invalid && (userForm.dirty || userForm.touched) && userForm.errors" class="text-danger small">
+                [ngClass]="userName && userName.invalid && (userName.dirty || userName.touched) ? 'border-danger':''">
+            <div *ngIf="userName && userName.invalid && (userName.dirty || userName.touched)" class="text-danger small">
                 Username is required.
             </div>
         </div>

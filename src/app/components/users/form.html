@@ -9,11 +9,12 @@
     <form *ngIf="users" [formGroup]="userForm" (submit)="onSubmit()" novalidate>
         <div class="form-group mb-3">
             <label for="birthday">Birthday:</label>
+            
             <input 
+            ngbDatepicker  (click)="d.toggle()" #d="ngbDatepicker"
                 [value]=""
                 formControlName="birthday" 
                 id="birthday" 
-                type="text" 
                 class="form-control"
                 [ngClass]="birthday && birthday.invalid && (birthday.dirty || birthday.touched) ? 'border-danger':''">
             <div *ngIf="birthday && birthday.invalid && (birthday.dirty || birthday.touched)" class="text-danger small">

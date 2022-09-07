@@ -54,7 +54,17 @@ export class UsersUpdateComponent implements OnInit {
   }
 
   onSubmit() {
-      this.UsersService.updateUser(this.userForm.value,this.userId.userId)
+    var birthaday =  this.userForm.value.birthday
+    var new_birthaday = ''
+    if(this.birthday){
+       new_birthaday = birthaday.day+'-'+birthaday.month+'-'+birthaday.year
+    }
+      this.UsersService.updateUser(this.userForm.value,new_birthaday,this.userId.userId).subscribe(res => {
+        console.log(res)
+        if(res.message == 'done'){
+          // this.router.navigate(['/users'])
+        }
+      })
 
 
     // stop here if form is invalid

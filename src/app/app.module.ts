@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +29,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     NgxPaginationModule,
     FormsModule,
+    NgbModule,
     ReactiveFormsModule 
   ],
   providers: [],

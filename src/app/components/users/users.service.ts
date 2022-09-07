@@ -26,10 +26,15 @@ export class UsersService {
     return this.http.get(this.apiUrl + 'user/' + id,httpOptions)
   
   }
-  updateUser(Data: any,id:number): Observable<any> {
+  updateUser(Data: any,new_birthaday:any,id:number): Observable<any> {
     var userdata = JSON.stringify({
       "userName": Data.userName,
-      "_id": id
+      "_id": id,
+      "birthday": new_birthaday,
+      "details": Data.details,
+      "email": Data.email,
+      "phone": Data.phone,
+      "type": Data.type,
     });
     console.log(userdata)
     return this.http.put<any>(this.apiUrl + 'user/' +id, userdata,httpOptions)
